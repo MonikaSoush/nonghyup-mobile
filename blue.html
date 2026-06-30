@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NongHyup Mobile — Blue Color Option</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0a0f1e;
+      min-height: 100vh;
+      padding: 60px 20px 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #60a5fa;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #3b82f6;
+      border-radius: 50%;
+    }
+
+    .page-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .page-title span {
+      color: #3b82f6;
+    }
+
+    .page-subtitle {
+      color: rgba(255,255,255,0.45);
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .screens-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .screen { flex-shrink: 0; }
+
+    .device-frame {
+      width: 430px;
+      background: #111;
+      border-radius: 54px;
+      padding: 16px;
+      box-shadow:
+        0 0 0 2px #1e2a3a,
+        0 0 0 4px #111,
+        0 30px 80px rgba(0,0,0,0.7),
+        0 0 60px rgba(59, 130, 246, 0.06),
+        inset 0 0 4px rgba(255,255,255,0.05);
+    }
+
+    .device-screen {
+      border-radius: 40px;
+      overflow: hidden;
+      position: relative;
+      background: #f5f5f5;
+    }
+
+    .device-notch {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 126px;
+      height: 36px;
+      background: #111;
+      border-radius: 20px;
+      z-index: 10;
+    }
+
+    .device-screen img {
+      width: 100%;
+      display: block;
+    }
+
+    .screen-label {
+      text-align: center;
+      color: rgba(255,255,255,0.45);
+      font-size: 13px;
+      font-weight: 500;
+      margin-top: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .screen-divider { display: none; }
+
+    .page-footer {
+      text-align: center;
+      margin-top: 80px;
+      color: rgba(255,255,255,0.2);
+      font-size: 12px;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        background: #f5f5f5;
+        padding: 0;
+      }
+
+      .page-header { display: none; }
+
+      .screens-grid {
+        gap: 0;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .device-frame {
+        width: 100%;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .device-screen { border-radius: 0; }
+      .device-notch, .screen-label { display: none; }
+
+      .screen-divider {
+        display: block;
+        height: 40px;
+        background: #e5e5e5;
+        position: relative;
+      }
+
+      .screen-divider::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 8px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.06), transparent);
+      }
+
+      .screen-divider::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        height: 8px;
+        background: linear-gradient(to top, rgba(0,0,0,0.06), transparent);
+      }
+
+      .page-footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <div class="badge">Color Variant</div>
+    <h1 class="page-title">NongHyup Mobile — <span>Blue</span> Option</h1>
+    <p class="page-subtitle">18 screens · Stakeholder review · June 2026</p>
+  </header>
+
+  <div class="screens-grid">
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/01-splash.png" alt="Splash">
+      </div></div>
+      <div class="screen-label">Splash</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/02-create-account.png" alt="Create Your Account">
+      </div></div>
+      <div class="screen-label">Create Your Account</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/03-products.png" alt="Products">
+      </div></div>
+      <div class="screen-label">Products</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/04-loan-details.png" alt="Loan Details">
+      </div></div>
+      <div class="screen-label">Loan Details</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/05-verify-id.png" alt="Verify ID">
+      </div></div>
+      <div class="screen-label">Verify ID</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/06-capture-id.png" alt="Capture ID">
+      </div></div>
+      <div class="screen-label">Capture ID</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/07-mwl-step5.png" alt="Step 5">
+      </div></div>
+      <div class="screen-label">Step 5</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/08-mwl-step6.png" alt="Step 6">
+      </div></div>
+      <div class="screen-label">Step 6</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/09-mwl-step7.png" alt="Step 7">
+      </div></div>
+      <div class="screen-label">Step 7</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/10-mwl-step8.png" alt="Step 8">
+      </div></div>
+      <div class="screen-label">Step 8</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/11-loan-calculator.png" alt="Loan Calculator">
+      </div></div>
+      <div class="screen-label">Loan Calculator</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/12-active-loan.png" alt="Active Loan">
+      </div></div>
+      <div class="screen-label">Active Loan</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/13-my-loan.png" alt="My Loan">
+      </div></div>
+      <div class="screen-label">My Loan</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/14-loan-rejected.png" alt="Loan — Rejected">
+      </div></div>
+      <div class="screen-label">Loan — Rejected</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/15-loan-in-progress.png" alt="Loan — In Progress">
+      </div></div>
+      <div class="screen-label">Loan — In Progress</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/16-pay.png" alt="Pay">
+      </div></div>
+      <div class="screen-label">Pay</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/17-more.png" alt="More">
+      </div></div>
+      <div class="screen-label">More</div>
+    </div>
+
+    <div class="screen-divider"></div>
+
+    <div class="screen">
+      <div class="device-frame"><div class="device-screen">
+        <div class="device-notch"></div>
+        <img src="screens/blue/18-settings.png" alt="Settings">
+      </div></div>
+      <div class="screen-label">Settings</div>
+    </div>
+
+  </div>
+
+  <footer class="page-footer">NongHyup Mobile · Blue Color Option · For stakeholder review</footer>
+
+</body>
+</html>
